@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/cloth"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cloth" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/transport" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/telephone" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/chat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cloth" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/transport" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/telephone" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="95dp"
+                android:layout_marginRight="5dp"
+
+                android:layout_weight="0.23"
+                android:background="@color/colorGreen"
+                android:text="Insert Income" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+
+                android:layout_height="95dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.23"
+                android:background="@color/colorAccent"
+                android:text="Insert Expence"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

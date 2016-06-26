@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.AppBarOverlay" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:openDrawer="start">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/content_dashboard" android:id="@+id/content_dashboard"/>
+
+            </FrameLayout>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_left"
+                android:layout_width="@dimen/nav_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:padding="16dp">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        style="@style/MySpinner"
+                        android:spinnerMode="dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:entries="@array/nav_spinner_items" />
+
+                    <RadioGroup
+                        android:id="@+id/nav_group_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/nav_radio_1"
+                            style="@style/RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:checked="true"
+                            android:text="Day" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/nav_radio_2"
+                            style="@style/RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Week" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/nav_radio_3"
+                            style="@style/RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Month" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/nav_radio_4"
+                            style="@style/RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Year" />
+
+                    </RadioGroup>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?selectableItemBackground"
+                        android:drawableTop="@mipmap/ic_launcher"
+                        android:padding="15dp"
+                        android:text="Choose date"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.design.widget.NavigationView>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_right"
+                android:layout_width="@dimen/nav_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="end">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher"
+                            android:tint="@color/colorPrimary" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorPrimary" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher"
+                            android:tint="@color/colorPrimary" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorPrimary" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="?selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher"
+                            android:tint="@color/colorPrimary" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorPrimary" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher"
+                            android:tint="@color/colorPrimary" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorPrimary" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.design.widget.NavigationView>
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

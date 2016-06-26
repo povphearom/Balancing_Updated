@@ -17,4 +17,11 @@
     <string name="title_master_list">Items</string>
     <string name="title_master_detail">Master Detail</string>
     <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="nav_spinner_items">
+        <item>All Accounts</item>
+        <item>Cash</item>
+        <item>Payment card</item>
+    </string-array>
 </resources>
